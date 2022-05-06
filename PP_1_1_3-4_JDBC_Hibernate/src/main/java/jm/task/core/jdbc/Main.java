@@ -19,6 +19,7 @@ public class Main {
         System.out.println("User с именем Fyodor добавлен в базу данных");
 
         userService.getAllUsers().forEach(user -> System.out.println(user.toString()));
+
         userService.cleanUsersTable();
         userService.dropUsersTable();
 
