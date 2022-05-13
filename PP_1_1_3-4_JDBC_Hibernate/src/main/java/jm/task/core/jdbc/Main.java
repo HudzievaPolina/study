@@ -25,6 +25,6 @@ public class Main {
         userService.cleanUsersTable();
         userService.dropUsersTable();
 
-        userService.dao.session.close();
+        userService.dao.factory.close();
     }
 }
