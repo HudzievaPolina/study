@@ -67,6 +67,6 @@ public class User {
 
    @Override
    public String toString() {
-      return "Id: " + this.id + "Name:" + this.firstName + "LastName: " + this.lastName + "Email: " + this.email;
+      return "Id: " + this.id + " Name: " + this.firstName + " LastName: " + this.lastName + " Email: " + this.email;
    }
 }
