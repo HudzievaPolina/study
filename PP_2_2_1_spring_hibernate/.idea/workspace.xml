@@ -5,11 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4bdd17f8-952c-4487-b0a7-a38bfe3bf466" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../PP_2_2_2_spring-mvc/src/main/java/web/controller/CarController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PP_2_2_2_spring-mvc/src/main/java/web/model/Car.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PP_2_2_2_spring-mvc/src/main/java/web/service/Service.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PP_2_2_2_spring-mvc/src/webapp/WEB-INF/pages/Cars.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PP_1_1_3-4_JDBC_Hibernate" beforeDir="false" afterPath="$PROJECT_DIR$/../PP_1_1_3-4_JDBC_Hibernate" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2.2.1. spring_hibernate/src/main/java/hiber/dao/UserDaoImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/2.2.1. spring_hibernate/src/main/java/hiber/dao/UserDaoImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2.2.1. spring_hibernate/src/main/java/hiber/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/2.2.1. spring_hibernate/src/main/java/hiber/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2.2.1. spring_hibernate/target/classes/hiber/dao/UserDaoImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/2.2.1. spring_hibernate/target/classes/hiber/dao/UserDaoImp.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +90,8 @@
       <workItem from="1652823315545" duration="673000" />
       <workItem from="1652824321730" duration="14102000" />
       <workItem from="1652897888509" duration="2226000" />
-      <workItem from="1652966218202" duration="858000" />
+      <workItem from="1652966218202" duration="1905000" />
+      <workItem from="1653043161918" duration="481000" />
     </task>
     <servers />
   </component>
