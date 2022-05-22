@@ -1,19 +1,33 @@
 <!DOCTYPE html>
-<body xmlns:form="http://www.springframework.com/tags/form">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body>
 
 <h2>User Info</h2>
 
 <br>
 
-<form:form action = "saveUser" modelAttribute = "user">
-    Name<form:input path = "name"/>
-    <br>
-    Last name<form:input path = "lastName"/>
-    <br>
-    Email<form:input path = "email"/>
-    <br>
-    <input type = "submit" value = "OK">
-</form:form>
+<form th:action="@{/saveUser}" th:object="${user}" method="post">
+
+    <input type="hidden" th:field="*{id}">
+
+    <div>
+        <label>Name:</label>
+        <input type="text" th:field="*{name}"/>
+    </div>
+
+    <div>
+        <label>Integer:</label>
+        <input type="text" th:field="*{lastName}"/>
+    </div>
+
+    <div>
+        <label>Double:</label>
+        <input type="text" th:field="*{email}"/>
+    </div>
+
+    <input type="submit" value="Submit"/>
+
+</form>
 
 </body>
 </html>

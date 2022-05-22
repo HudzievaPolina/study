@@ -15,18 +15,33 @@
         <th>name</th>
         <th>last name</th>
         <th>email</th>
+        <th>operations</th>
     </tr>
     <tr th:each="user : ${allUsers}">
         <td th:text="${user.name}"></td>
         <td th:text="${user.lastName}"></td>
         <td th:text="${user.email}"></td>
+        <!--<td><input type = "button" value = "update"
+                   onclick = "window.location.href = '/updateUser'"/>
+        </td>
+        <td><a th:href="@{/edit/{id}(id=${user.id})}">Edit</a></td>
+        -->
+        <td><form th:action="@{/updateInfo/{id}(id=${user.id})}">
+            <input type="submit" value="edit"/>
+        </form>
+
+        <form th:action="@{/deleteUser/{id}(id=${user.id})}">
+            <input type="submit" value="delete"/>
+        </form>
+        </td>
+
     </tr>
 </table>
 
 <br>
 
 <input type = "button" value = "add"
-       onclick = "window.location.href = 'addNewUser'"/>
+       onclick = "window.location.href = '/addNewUser'"/>
 
 </body>
 </html>
