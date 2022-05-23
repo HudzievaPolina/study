@@ -4,17 +4,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import web.model.Car;
 import web.service.Service;
+import web.service.ServiceImpl;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.List;
 
 @Controller
 
 public class CarController {
     @Autowired
-    Service service = new Service();
+    Service service;
 
     @GetMapping(value = "/cars")
     public String carsList(HttpServletRequest request, Model model) {

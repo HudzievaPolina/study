@@ -1,3 +1,5 @@
+package myPackage;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.stereotype.Repository;
@@ -7,10 +9,17 @@ import javax.persistence.EntityManagerFactory;
 import java.util.List;
 
 @Repository
-public class UserDAO{
+public class UserDAO {
 
-    @Autowired
+ public UserDAO (LocalContainerEntityManagerFactoryBean entityManagerFactoryBean) {
+     this.entityManagerFactoryBean = entityManagerFactoryBean;
+ }
         private LocalContainerEntityManagerFactoryBean entityManagerFactoryBean;
+
+//    @Autowired
+//    void setEntityManagerFactoryBean(LocalContainerEntityManagerFactoryBean entityManagerFactoryBean) {
+//        this.entityManagerFactoryBean = entityManagerFactoryBean;
+//    }
         private EntityManagerFactory entityManagerFactory = entityManagerFactoryBean.getObject();
 
 
