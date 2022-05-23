@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4bdd17f8-952c-4487-b0a7-a38bfe3bf466" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../untitled/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled/src/main/java/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled/src/main/java/UserDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PP_1_1_3-4_JDBC_Hibernate" beforeDir="false" afterPath="$PROJECT_DIR$/../PP_1_1_3-4_JDBC_Hibernate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../untitled/src/main/java/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled/src/main/java/Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../untitled/src/main/java/DAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled/target/classes/Main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,6 +91,7 @@
       <workItem from="1653043161918" duration="481000" />
       <workItem from="1653233057524" duration="2205000" />
       <workItem from="1653238324941" duration="1201000" />
+      <workItem from="1653307766737" duration="323000" />
     </task>
     <servers />
   </component>

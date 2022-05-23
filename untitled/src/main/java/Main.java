@@ -1,10 +1,14 @@
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class Main {
     public static void main(String[] args) {
 
+        AnnotationConfigApplicationContext context =
+                new AnnotationConfigApplicationContext(Config.class);
 
         UserDAO userDAO = new UserDAO();
+
 
         User user1 = new User();
         user1.setName("Vasya");
