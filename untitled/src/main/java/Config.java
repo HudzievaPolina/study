@@ -12,18 +12,16 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import javax.sql.DataSource;
 import java.util.Properties;
 
+@Configuration
+@EnableTransactionManagement
 public class Config {
-    @Configuration
-    @EnableTransactionManagement
-//@PropertySource("classpath:db.properties")
 
-    public class PersistenceJPAConfig{
-        @Bean
-        public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
+        @Bean(name = "entityManagerFactoryBean")
+        public LocalContainerEntityManagerFactoryBean entityManagerFactoryBean() {
             LocalContainerEntityManagerFactoryBean em
                     = new LocalContainerEntityManagerFactoryBean();
             em.setDataSource(dataSource());
-            em.setPackagesToScan(new String[] { "spring_mvc_hibernate" });
+            em.setPackagesToScan(new String[]{"spring_mvc_hibernate"});
 
             JpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
             em.setJpaVendorAdapter(vendorAdapter);
@@ -31,25 +29,27 @@ public class Config {
 
             return em;
         }
+
         @Bean
-        public DataSource dataSource(){
+        public DataSource dataSource() {
             DriverManagerDataSource dataSource = new DriverManagerDataSource();
             dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
             dataSource.setUrl("jdbc:mysql://localhost:3306/mydbtest");
-            dataSource.setUsername( "root" );
-            dataSource.setPassword( "asyasweetcream" );
+            dataSource.setUsername("root");
+            dataSource.setPassword("asyasweetcream");
             return dataSource;
         }
+
         @Bean
         public PlatformTransactionManager transactionManager() {
             JpaTransactionManager transactionManager = new JpaTransactionManager();
-            transactionManager.setEntityManagerFactory(entityManagerFactory().getObject());
+            transactionManager.setEntityManagerFactory(entityManagerFactoryBean().getObject());
 
             return transactionManager;
         }
 
         @Bean
-        public PersistenceExceptionTranslationPostProcessor exceptionTranslation(){
+        public PersistenceExceptionTranslationPostProcessor exceptionTranslation() {
             return new PersistenceExceptionTranslationPostProcessor();
         }
 
@@ -60,6 +60,5 @@ public class Config {
 
             return properties;
         }
-
     }
-}
+
