@@ -5,7 +5,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import spring_mvc_hibernate.dao.UserDAO;
 import spring_mvc_hibernate.entity.User;
 import spring_mvc_hibernate.service.UserService;
 
