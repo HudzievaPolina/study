@@ -26,11 +26,11 @@
         </td>
         <td><a th:href="@{/edit/{id}(id=${user.id})}">Edit</a></td>
         -->
-        <td><form th:action="@{/updateInfo/{id}(id=${user.id})}">
+        <td><form th:action="@{/update/{id}(id=${user.id})}">
             <input type="submit" value="edit"/>
         </form>
 
-        <form th:action="@{/deleteUser/{id}(id=${user.id})}">
+        <form th:action="@{/delete/{id}(id=${user.id})}">
             <input type="submit" value="delete"/>
         </form>
         </td>
@@ -41,7 +41,7 @@
 <br>
 
 <input type = "button" value = "add"
-       onclick = "window.location.href = '/addNewUser'"/>
+       onclick = "window.location.href = '/add'"/>
 
 </body>
 </html>

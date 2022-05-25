@@ -5,22 +5,47 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4bdd17f8-952c-4487-b0a7-a38bfe3bf466" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../PP_2_1_3_SpringBeans/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled/src/main/java/myPackage/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PP_2_3_1_CRUD-app/src/main/java/resources/db.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PP_1_1_3-4_JDBC_Hibernate" beforeDir="false" afterPath="$PROJECT_DIR$/../PP_1_1_3-4_JDBC_Hibernate" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PP_2_2_2_spring-mvc/src/main/java/web/controller/CarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PP_2_2_2_spring-mvc/src/main/java/web/controller/CarController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PP_2_2_2_spring-mvc/src/main/java/web/model/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PP_2_2_2_spring-mvc/src/main/java/web/model/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PP_2_2_2_spring-mvc/src/main/java/web/service/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PP_2_2_2_spring-mvc/src/main/java/web/service/CarService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PP_2_2_2_spring-mvc/src/main/java/web/service/ServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PP_2_2_2_spring-mvc/src/main/java/web/service/CarServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PP_2_2_2_spring-mvc/target/Spring_MVC/WEB-INF/classes/web/controller/CarController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../PP_2_2_2_spring-mvc/target/Spring_MVC/WEB-INF/classes/web/controller/CarController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PP_2_2_2_spring-mvc/target/classes/web/controller/CarController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../PP_2_2_2_spring-mvc/target/classes/web/controller/CarController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PP_2_3_1_CRUD-app/src/main/java/spring_mvc_hibernate/config/PersistenceJPAConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PP_2_3_1_CRUD-app/src/main/java/spring_mvc_hibernate/config/PersistenceJPAConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PP_2_3_1_CRUD-app/src/main/java/spring_mvc_hibernate/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PP_2_3_1_CRUD-app/src/main/java/spring_mvc_hibernate/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PP_2_3_1_CRUD-app/src/main/java/spring_mvc_hibernate/dao/UserDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PP_2_3_1_CRUD-app/src/main/java/spring_mvc_hibernate/dao/UserDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PP_2_3_1_CRUD-app/src/main/java/spring_mvc_hibernate/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PP_2_3_1_CRUD-app/src/main/java/spring_mvc_hibernate/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PP_2_3_1_CRUD-app/src/main/webapp/WEB-INF/view/all-users.html" beforeDir="false" afterPath="$PROJECT_DIR$/../PP_2_3_1_CRUD-app/src/main/webapp/WEB-INF/view/all-users.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PP_2_3_1_CRUD-app/src/main/webapp/WEB-INF/view/user-info.html" beforeDir="false" afterPath="$PROJECT_DIR$/../PP_2_3_1_CRUD-app/src/main/webapp/WEB-INF/view/user-info.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PP_2_3_1_CRUD-app/target/PP_2_3_1_CRUD-app/WEB-INF/classes/spring_mvc_hibernate/config/PersistenceJPAConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/../PP_2_3_1_CRUD-app/target/PP_2_3_1_CRUD-app/WEB-INF/classes/spring_mvc_hibernate/config/PersistenceJPAConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PP_2_3_1_CRUD-app/target/PP_2_3_1_CRUD-app/WEB-INF/classes/spring_mvc_hibernate/controller/Controller.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PP_2_3_1_CRUD-app/target/PP_2_3_1_CRUD-app/WEB-INF/classes/spring_mvc_hibernate/dao/UserDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../PP_2_3_1_CRUD-app/target/PP_2_3_1_CRUD-app/WEB-INF/classes/spring_mvc_hibernate/dao/UserDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PP_2_3_1_CRUD-app/target/PP_2_3_1_CRUD-app/WEB-INF/classes/spring_mvc_hibernate/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/../PP_2_3_1_CRUD-app/target/PP_2_3_1_CRUD-app/WEB-INF/classes/spring_mvc_hibernate/entity/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PP_2_3_1_CRUD-app/target/PP_2_3_1_CRUD-app/WEB-INF/view/all-users.html" beforeDir="false" afterPath="$PROJECT_DIR$/../PP_2_3_1_CRUD-app/target/PP_2_3_1_CRUD-app/WEB-INF/view/all-users.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PP_2_3_1_CRUD-app/target/PP_2_3_1_CRUD-app/WEB-INF/view/user-info.html" beforeDir="false" afterPath="$PROJECT_DIR$/../PP_2_3_1_CRUD-app/target/PP_2_3_1_CRUD-app/WEB-INF/view/user-info.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PP_2_3_1_CRUD-app/target/classes/spring_mvc_hibernate/config/PersistenceJPAConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/../PP_2_3_1_CRUD-app/target/classes/spring_mvc_hibernate/config/PersistenceJPAConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../untitled/src/main/java/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled/src/main/java/myPackage/Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../untitled/src/main/java/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../untitled/src/main/java/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../untitled/src/main/java/UserDAO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../untitled/target/classes/Config.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../untitled/target/classes/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../untitled/target/classes/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../untitled/target/classes/UserDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PP_2_3_1_CRUD-app/target/classes/spring_mvc_hibernate/controller/Controller.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PP_2_3_1_CRUD-app/target/classes/spring_mvc_hibernate/dao/UserDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../PP_2_3_1_CRUD-app/target/classes/spring_mvc_hibernate/dao/UserDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PP_2_3_1_CRUD-app/target/classes/spring_mvc_hibernate/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/../PP_2_3_1_CRUD-app/target/classes/spring_mvc_hibernate/entity/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/src/main/java/myPackage/Config.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/src/main/java/myPackage/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/src/main/java/myPackage/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/src/main/java/myPackage/UserDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/target/classes/myPackage/Config.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/target/classes/myPackage/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/target/classes/myPackage/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/target/classes/myPackage/UserDAO.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +86,9 @@
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "17",
     "last_opened_file_path": "C:/Users/Ульяна/study/untitled",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "spring.configuration.checksum": "973519049f1dda9dcc3abb7a7e786282"
   },
   "keyToStringList": {
@@ -105,6 +133,8 @@
       <workItem from="1653233057524" duration="2205000" />
       <workItem from="1653238324941" duration="1201000" />
       <workItem from="1653307766737" duration="2174000" />
+      <workItem from="1653413493283" duration="636000" />
+      <workItem from="1653505670676" duration="2176000" />
     </task>
     <servers />
   </component>

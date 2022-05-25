@@ -4,7 +4,7 @@ import web.model.Car;
 
 import java.util.List;
 
-public interface Service {
+public interface CarService {
     public List<Car> getCars(int amount);
     public List<Car> getCarList();
 }

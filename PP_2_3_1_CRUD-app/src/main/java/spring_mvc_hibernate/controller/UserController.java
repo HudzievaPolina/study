@@ -7,14 +7,17 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import spring_mvc_hibernate.entity.User;
 import spring_mvc_hibernate.service.UserService;
-
+import org.springframework.stereotype.Controller;
 import java.util.List;
 
-@org.springframework.stereotype.Controller
-public class Controller {
+@Controller
+public class UserController {
 
-    @Autowired
     private UserService userService;
+    @Autowired
+    public UserController(UserService userService) {
+        this.userService = userService;
+    }
 
     @RequestMapping("/")
     public String showAllUsers(Model model) {
@@ -23,26 +26,26 @@ public class Controller {
         return "all-users";
     }
 
-    @RequestMapping("/addNewUser")
+    @RequestMapping("/add")
     public String addNewUser(Model model) {
         User user = new User();
         model.addAttribute("user", user);
         return "user-info";
     }
 
-    @RequestMapping("/saveUser")
+    @RequestMapping("/save")
     public String saveUser(@ModelAttribute("user") User user) {
         userService.saveUser(user);
         return "redirect:/";
     }
 
-    @RequestMapping("/updateInfo/{id}")
+    @RequestMapping("/update/{id}")
     public String updateUser(@PathVariable("id") long id, Model model) {
         model.addAttribute("user", userService.getUserById(id));
         return "user-info";
     }
 
-    @RequestMapping("/deleteUser/{id}")
+    @RequestMapping("/delete/{id}")
     public String deleteUser(@PathVariable("id") long id) {
         userService.deleteUser(id);
         return "redirect:/";

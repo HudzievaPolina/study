@@ -1,5 +1,7 @@
 package web.model;
 
+import java.util.Objects;
+
 public class Car {
     private String model;
     private int year;
@@ -35,5 +37,32 @@ public class Car {
 
     public void setColor(String color) {
         this.color = color;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == this) {
+            return true;
+        } else if (obj == null || obj.getClass() != this.getClass()) {
+            return false;
+        } else {
+            Car car = (Car) obj;
+            return (car.getColor() == this.getColor() || (this.getColor() != null && this.getColor().equals(car.getColor())))
+                    && (car.getModel() == this.getModel() || (this.getModel() != null && this.getModel().equals(car.getModel())))
+                    && (car.getYear() == this.getYear());
+        }
+    }
+
+    @Override
+    public int hashCode() {
+        int result = 17;
+        result = 31 * result + (color == null ? 0 : color.hashCode())
+                + year + (model == null ? 0 : model.hashCode());
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        return "model: " + model + " year: " + year + " color: " + color;
     }
 }

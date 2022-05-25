@@ -1,6 +1,7 @@
 package spring_mvc_hibernate.entity;
 
 import javax.persistence.*;
+import java.util.Objects;
 
 @Entity
 @Table(name = "users")
@@ -48,5 +49,28 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof User)) return false;
+        User user = (User) o;
+        return getId() == user.getId() && Objects.equals(getName(), user.getName()) && Objects.equals(getLastName(), user.getLastName()) && Objects.equals(getEmail(), user.getEmail());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId(), getName(), getLastName(), getEmail());
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id = " + id +
+                ", name = " + name +
+                ", lastName = " + lastName +
+                ", email = " + email +
+                '}';
     }
 }
