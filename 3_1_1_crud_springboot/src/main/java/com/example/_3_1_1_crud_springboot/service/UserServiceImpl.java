@@ -4,8 +4,6 @@ import com.example._3_1_1_crud_springboot.dao.UserDAO;
 import com.example._3_1_1_crud_springboot.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-
 import javax.transaction.Transactional;
 import java.util.List;
 

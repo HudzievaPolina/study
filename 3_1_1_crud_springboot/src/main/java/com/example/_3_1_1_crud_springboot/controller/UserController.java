@@ -8,11 +8,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-
-
 import java.util.List;
 
 @Controller
+@RequestMapping("/api")
 public class UserController {
 
     private UserService userService;
@@ -28,28 +27,28 @@ public class UserController {
         return "all-users";
     }
 
-    @RequestMapping("add")
+    @RequestMapping("/add")
     public String addNewUser(Model model) {
         User user = new User();
         model.addAttribute("user", user);
         return "user-info";
     }
 
-    @RequestMapping("save")
+    @RequestMapping("/save")
     public String saveUser(@ModelAttribute("user") User user) {
         userService.saveUser(user);
-        return "redirect:/";
+        return "redirect:/api/";
     }
 
-    @RequestMapping("update/{id}")
+    @RequestMapping("/update/{id}")
     public String updateUser(@PathVariable("id") long id, Model model) {
         model.addAttribute("user", userService.getUserById(id));
         return "user-info";
     }
 
-    @RequestMapping("delete/{id}")
+    @RequestMapping("/delete/{id}")
     public String deleteUser(@PathVariable("id") long id) {
         userService.deleteUser(id);
-        return "redirect:/";
+        return "redirect:/api/";
     }
 }

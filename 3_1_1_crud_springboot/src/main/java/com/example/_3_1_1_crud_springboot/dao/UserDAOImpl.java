@@ -2,8 +2,6 @@ package com.example._3_1_1_crud_springboot.dao;
 
 import com.example._3_1_1_crud_springboot.entity.User;
 import org.springframework.stereotype.Repository;
-
-
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.List;
