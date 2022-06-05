@@ -5,6 +5,7 @@ import ru.kata.spring.boot_security.demo.model.User;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public class UserDAOImpl implements UserDAO{
@@ -28,6 +29,13 @@ public class UserDAOImpl implements UserDAO{
     @Override
     public User getUserById(long id) {
         return entityManager.find(User.class, id);
+    }
+
+    @Override
+    public User getUserByEmail(String email) {
+        return entityManager.createQuery("from User where email = :email", User.class)
+                .setParameter("email", email)
+                .getSingleResult();
     }
 
     @Override
