@@ -15,7 +15,6 @@
 <form th:action="@{/admin/save}" th:object="${user}" method="post">
 
     <input type="hidden" th:field="${user.id}">
-    <input type="hidden" th:field="${user.roles}">
 
     <div>
         <label>Name:</label>
@@ -38,11 +37,11 @@
     </div>
 
     <div>
-        <label> Roles: </label>
-            <select multiple="multiple" size="2" name="roles[]" th:required="true" class="form-control">
-                <option value="1">USER</option>
-                <option value="2">ADMIN</option>
-            </select>
+        <label>Roles:</label>
+        <select multiple size="2" name="roles[]" th:required="true" class="form-control">
+            <option value="1">USER</option>
+            <option value="2">ADMIN</option>
+        </select>
     </div>
 
     <input type="submit" value="OK"/>

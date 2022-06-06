@@ -17,12 +17,16 @@
         <th>name</th>
         <th>last name</th>
         <th>email</th>
+        <th>password</th>
+        <th>roles</th>
         <th>operations</th>
     </tr>
     <tr th:each="user : ${allUsers}">
         <td th:text="${user.name}"></td>
         <td th:text="${user.lastName}"></td>
         <td th:text="${user.email}"></td>
+        <td th:text="${user.pass}"></td>
+        <td th:each="role : ${user.roles}" th:text="${role}"></td>
         <td>
             <form th:action="@{/admin/update/{id}(id=${user.id})}">
                 <input type="submit" value="edit"/>

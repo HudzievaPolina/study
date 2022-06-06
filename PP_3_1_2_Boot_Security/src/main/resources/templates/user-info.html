@@ -32,8 +32,16 @@
     </div>
 
     <div>
-        <label>Roles (enter separated by commas):</label>
-        <input type="text" th:value="${roles}" name="roles"/>
+        <label>Password:</label>
+        <input type="text" th:field="${user.pass}"/>
+    </div>
+
+    <div>
+        <label>Roles:</label>
+        <select multiple size="2" name="roles[]" th:required="true" class="form-control">
+            <option value="1">USER</option>
+            <option value="2">ADMIN</option>
+        </select>
     </div>
 
     <input type="submit" value="OK"/>
