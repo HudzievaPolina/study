@@ -11,6 +11,7 @@ import javax.transaction.Transactional;
 import java.util.List;
 
 @Service
+
 public class UserServiceImpl implements UserService, UserDetailsService {
 
     private final UserDAO userDAO;
@@ -45,6 +46,7 @@ public class UserServiceImpl implements UserService, UserDetailsService {
     }
 
     @Override
+    @Transactional
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
         User user = userDAO.getUserByEmail(email);
         if (user == null) {
