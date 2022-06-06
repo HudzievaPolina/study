@@ -15,7 +15,6 @@
 <form th:action="@{/admin/save}" th:object="${user}" method="post">
 
     <input type="hidden" th:field="${user.id}">
-    <input type="hidden" th:field="${user.roles}">
 
     <div>
         <label>Name:</label>
@@ -34,7 +33,7 @@
 
     <div>
         <label>Roles (enter separated by commas):</label>
-        <input type="text" th:value="${roles}"/>
+        <input type="text" th:value="${roles}" name="roles"/>
     </div>
 
     <input type="submit" value="OK"/>
