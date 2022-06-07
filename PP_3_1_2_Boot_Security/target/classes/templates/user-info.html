@@ -38,9 +38,8 @@
 
     <div>
         <label>Roles:</label>
-        <select multiple size="2" name="roles[]" th:required="true" class="form-control">
-            <option value="1">USER</option>
-            <option value="2">ADMIN</option>
+        <select multiple size="2" name="roles[]" th:required="true" class="form-control" >
+            <option th:each="role : ${roles}" th:value="${role.id}" th:text = "${role.role}"></option>
         </select>
     </div>
 

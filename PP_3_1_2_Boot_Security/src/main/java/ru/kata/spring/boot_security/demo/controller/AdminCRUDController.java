@@ -13,6 +13,8 @@ import ru.kata.spring.boot_security.demo.dao.RoleRepository;
 import ru.kata.spring.boot_security.demo.model.Role;
 import ru.kata.spring.boot_security.demo.model.User;
 import ru.kata.spring.boot_security.demo.service.UserService;
+
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -43,17 +45,19 @@ public class AdminCRUDController {
     public String addNewUser(Model model) {
         User user = new User();
         model.addAttribute("user", user);
+        model.addAttribute("roles", roleRepository.findAll());
         return "user-info";
     }
 
     @RequestMapping("/save")
-    public String saveUser(@ModelAttribute("user") User user, @RequestParam(value = "roles[]") Integer[] roleIds) {
+    public String saveUser(@ModelAttribute("user") User user, @RequestParam(value = "roles[]") Long[] roleIds) {
         Set<Role> roles = new HashSet<>();
-        for (Integer roleId : roleIds) {
-            roles.add(roleRepository.getById(new Long(roleId)));
-       }
+        roles.addAll(roleRepository.findAllById(Arrays.asList(roleIds)));
         user.setRoles(roles);
-        user.setPass(passwordEncoder.encode(user.getPass()));
+        User oldUser = userService.getUserById(user.getId());
+        if(oldUser == null || !oldUser.getPass().equals(user.getPass())) {
+            user.setPass(passwordEncoder.encode(user.getPass()));
+        }
         userService.saveUser(user);
         return "redirect:/admin/";
     }
@@ -62,6 +66,7 @@ public class AdminCRUDController {
     public String updateUser(@PathVariable("id") long id, Model model) {
         User user = userService.getUserById(id);
         model.addAttribute("user", userService.getUserById(id));
+        model.addAttribute("roles", roleRepository.findAll());
         return "user-info";
     }
 
