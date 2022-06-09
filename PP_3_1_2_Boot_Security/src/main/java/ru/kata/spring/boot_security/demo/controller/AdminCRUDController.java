@@ -2,13 +2,11 @@ package ru.kata.spring.boot_security.demo.controller;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import ru.kata.spring.boot_security.demo.dao.RoleRepository;
 import ru.kata.spring.boot_security.demo.model.Role;
 import ru.kata.spring.boot_security.demo.model.User;
@@ -35,21 +33,24 @@ public class AdminCRUDController {
     }
 
     @RequestMapping("/")
-    public String showAllUsers(Model model) {
+    public String showAllUsers(Authentication authentication, Model model) {
         List<User> allUsers = userService.getAllUsers();
+        User user = userService.getUserByEmail(authentication.getName());
+        model.addAttribute("authUser", user);
         model.addAttribute("allUsers", allUsers);
+        model.addAttribute("newUser", new User());
+        model.addAttribute("roles", roleRepository.findAll());
         return "all-users";
     }
 
-    @RequestMapping("/add")
-    public String addNewUser(Model model) {
-        User user = new User();
-        model.addAttribute("user", user);
-        model.addAttribute("roles", roleRepository.findAll());
-        return "user-info";
-    }
+@RequestMapping("/user")
+public String user(Authentication authentication, Model model) {
+    User user = userService.getUserByEmail(authentication.getName());
+    model.addAttribute("authUser", user);
+    return "admin-user";
+}
 
-    @RequestMapping("/save")
+    @RequestMapping({"/save", "/{id}"})
     public String saveUser(@ModelAttribute("user") User user, @RequestParam(value = "roles[]") Long[] roleIds) {
         Set<Role> roles = new HashSet<>();
         roles.addAll(roleRepository.findAllById(Arrays.asList(roleIds)));
@@ -60,14 +61,6 @@ public class AdminCRUDController {
         }
         userService.saveUser(user);
         return "redirect:/admin/";
-    }
-
-    @RequestMapping("/update/{id}")
-    public String updateUser(@PathVariable("id") long id, Model model) {
-        User user = userService.getUserById(id);
-        model.addAttribute("user", userService.getUserById(id));
-        model.addAttribute("roles", roleRepository.findAll());
-        return "user-info";
     }
 
     @RequestMapping("/delete/{id}")

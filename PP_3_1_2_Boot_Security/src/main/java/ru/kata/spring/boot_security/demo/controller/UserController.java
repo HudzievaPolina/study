@@ -20,7 +20,7 @@ public class UserController {
     @RequestMapping("/user")
     public String userInfo(Authentication authentication, Model model) {
         User user = userDAO.getUserByEmail(authentication.getName());
-        model.addAttribute("user", user);
+        model.addAttribute("authUser", user);
         return "user";
     }
 }
