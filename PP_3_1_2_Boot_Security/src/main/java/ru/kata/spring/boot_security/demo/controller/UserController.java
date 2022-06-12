@@ -10,7 +10,7 @@ import ru.kata.spring.boot_security.demo.model.User;
 
 @Controller
 public class UserController {
-    private UserDAO userDAO;
+    private final UserDAO userDAO;
 
     @Autowired
     public UserController(UserDAO userDAO) {

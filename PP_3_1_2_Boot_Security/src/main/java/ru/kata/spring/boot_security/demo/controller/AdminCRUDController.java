@@ -11,7 +11,6 @@ import ru.kata.spring.boot_security.demo.dao.RoleRepository;
 import ru.kata.spring.boot_security.demo.model.Role;
 import ru.kata.spring.boot_security.demo.model.User;
 import ru.kata.spring.boot_security.demo.service.UserService;
-
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
@@ -21,9 +20,9 @@ import java.util.Set;
 @RequestMapping("/admin")
 public class AdminCRUDController {
 
-    private UserService userService;
-    private RoleRepository roleRepository;
-    private PasswordEncoder passwordEncoder;
+    private final UserService userService;
+    private final RoleRepository roleRepository;
+    private final PasswordEncoder passwordEncoder;
 
     @Autowired
     public AdminCRUDController(UserService userService, RoleRepository roleRepository, PasswordEncoder passwordEncoder) {

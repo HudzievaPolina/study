@@ -233,42 +233,42 @@
                         <div class="card-body">
                             <div class="container-fluid text-center col-4">
 
-                                    <form th:action="@{/admin/save}" th:object="${newUser}" method="post">
+                                <form th:action="@{/admin/save}" th:object="${newUser}" method="post">
 
-                                        <input type="hidden" th:field="${newUser.id}">
+                                    <input type="hidden" th:field="${newUser.id}">
 
-                                        <div>
-                                            <div class="text-center pt-4 pb-0"><b>First Name</b></div>
-                                            <input type="text" class="form-control" id="first-name" th:field="${newUser.name}"/>
-                                        </div>
+                                    <div>
+                                        <div class="text-center pt-4 pb-0"><b>First Name</b></div>
+                                        <input type="text" class="form-control" id="first-name" th:field="${newUser.name}"/>
+                                    </div>
 
-                                        <div>
-                                            <div class="text-center pt-4 pb-0"><b>Last Name</b></div>
-                                            <input type="text" class="form-control" id="last-name" th:field="${newUser.lastName}"/>
-                                        </div>
+                                    <div>
+                                        <div class="text-center pt-4 pb-0"><b>Last Name</b></div>
+                                        <input type="text" class="form-control" id="last-name" th:field="${newUser.lastName}"/>
+                                    </div>
 
-                                        <div>
-                                            <div class="text-center pt-4 pb-0"><b>Email</b></div>
-                                            <input type="text" class="form-control" id="email" th:field="${newUser.email}"/>
-                                        </div>
+                                    <div>
+                                        <div class="text-center pt-4 pb-0"><b>Email</b></div>
+                                        <input type="text" class="form-control" id="email" th:field="${newUser.email}"/>
+                                    </div>
 
-                                        <div>
-                                            <div class="text-center pt-4 pb-0"><b>Password</b></div>
-                                            <input type="text" class="form-control" id="password" th:field="${newUser.pass}"/>
-                                        </div>
+                                    <div>
+                                        <div class="text-center pt-4 pb-0"><b>Password</b></div>
+                                        <input type="text" class="form-control" id="password" th:field="${newUser.pass}"/>
+                                    </div>
 
-                                        <div>
-                                            <div class="text-center pt-4 pb-0"><b>Role</b></div>
-                                            <select multiple size="2" name="roles[]" th:required="true" class="form-control" >
-                                                <option th:each="role : ${roles}" th:value="${role.id}" th:text = "${role.role}"></option>
-                                            </select>
-                                        </div>
+                                    <div>
+                                        <div class="text-center pt-4 pb-0"><b>Role</b></div>
+                                        <select multiple size="2" name="roles[]" th:required="true" class="form-control" >
+                                            <option th:each="role : ${roles}" th:value="${role.id}" th:text = "${role.role}"></option>
+                                        </select>
+                                    </div>
 
-                                        <div class="text-center pt-3">
-                                            <button class="btn btn-success" type="submit">Add new user</button>
-                                        </div>
+                                    <div class="text-center pt-3">
+                                        <button class="btn btn-success" type="submit">Add new user</button>
+                                    </div>
 
-                                    </form>
+                                </form>
 
 
                             </div>
